@@ -58,9 +58,9 @@ impl Contract {
     ) -> Self {
         let this = Self {
             tokens_per_owner: LookupMap::new(StorageKey::TokensPerOwner.try_to_vec().unwrap()),
-            tokens_by_id: LookupMap::new(StorageKey::TokensById.try_to_vec().unwrap()),
+            tokens_by_id: LookupMap::new(StorageKey::TokensById),
             owner_id,
-            storage_deposits: LookupMap::new(StorageKey::StorageDeposits.try_to_vec().unwrap()),
+            storage_deposits: LookupMap::new(StorageKey::StorageDeposits),
             nft_address,
             ft_address,
             daily_reward,
